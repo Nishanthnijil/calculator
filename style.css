@@ -1,54 +1,67 @@
-body {  
-    background-color: #110f0f;
-    padding: 20px;
-}
-
-.grid-container {
-    display: grid;
+body {
+    display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: center;  
-    border-radius:15px;
+    height: 100vh;
+    background-color: #f0f0f0;
+    font-family: 'Roboto', sans-serif;
 }
 
-.calculator-grid {
+.calculator {
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    width: 400px;
+}
+
+.calculator-screen {
+    width: 92%;
+    height: 80px;
+    border: none;
+    background-color: #252525;
+    color: white;
+    text-align: right;
+    padding-right: 20px;
+    padding-left: 10px;
+    font-size: 4em;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+button {
+    height: 60px;
+    font-size: 2em;
+    border: 1px solid #d4d4d2;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #d4d4d2;
+}
+
+.operator {
+    background-color: #f0a33e;
+    color: white;
+}
+
+.equal-sign {
+    background-color: #3e8e41;
+    color: white;
+    height: 100%;
+}
+
+.all-clear {
+    background-color: #e74c3c;
+    color: white;
+    height: 100%;
+    
+    
+}
+
+
+.calculator-keys {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(6, 1fr);
     grid-gap: 1px;
-    border-radius:15px;
-    background-color: #999;
-} 
-
-.calculator-grid button {
-    font-size: 25px;
-    background-color: #fff;
-    border: none;
-    cursor: pointer;
-    border-radius:15px;
-    font-family: 'DM Mono', monospace;
-} 
-
-textarea {
-  grid-column: span 4;
-  font-family: 'DM Mono', monospace;
-  font-size: 25px;
-  color:white;
-  text-align: end;
-  background-color: #35374B;
-  border-radius:15px;
-  padding: 15px;
-  border: none;
-}
-
-.calculator-grid button:nth-child(n+18) {
-    background-color: #50727B; 
-}
-
-
-button:hover,
-.calculator-grid button:nth-child(n+18):hover {
-    background-color: #78A083;
-    color: white;
-    border-radius:15px;
-    transition: 0.2s;
 }
